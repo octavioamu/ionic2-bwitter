@@ -1,0 +1,19 @@
+<ion-navbar *navbar dark>
+  <ion-title>Bwitter</ion-title>
+</ion-navbar>
+
+<ion-content id="home" padding class="home-content">
+  <form [ngFormModel]="loginForm">
+  <ion-list inset>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Seu Nome" text-center [(ngModel)]="username" ngControl="username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <button (click)="login()" round default block dark [disabled]="!loginForm.valid">Join</button>
+    </ion-item>
+
+  </ion-list>
+  </form>
+</ion-content>

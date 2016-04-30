@@ -1,0 +1,24 @@
+.bwitters-page {
+  .back-button {
+    color: map-get($colors, 'favorite') !important;
+  }
+  .button-icon-only {
+    ion-icon {
+      font-size: 2.8em !important;
+    }
+  }
+}
+
+.bwitters {
+  .bwitter {
+    p {
+      white-space: normal;
+    }
+    &.is-me {
+      color: map-get($colors, 'favorite') !important;
+      p {
+        color: map-get($colors, 'favorite') !important;
+      }
+    }
+  }
+}

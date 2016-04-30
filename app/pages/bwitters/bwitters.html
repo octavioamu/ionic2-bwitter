@@ -1,0 +1,26 @@
+<ion-navbar *navbar dark>
+    <ion-title>Bwitters</ion-title>
+</ion-navbar>
+
+<ion-content>
+
+    <form [ngFormModel]="messageForm">
+        <ion-list inset>
+            <ion-item>
+                <ion-input [(ngModel)]="message" ngControl="message" type="text" placeholder="enter your bwitter..."></ion-input>
+                <button (click)="sendMessage()" [disabled]="!messageForm.valid" clear favorite item-right>
+                    <ion-icon name="send"></ion-icon>
+                </button>
+            </ion-item>
+        </ion-list>
+    </form>
+
+    <ion-list no-lines class="bwitters">
+        <ion-item class="bwitter" *ngFor="#message of messages" [ngClass]="{ 'is-me': (message.user === username) }">
+            <p>{{ message.user }} bwittou:</p>
+            <h2>{{ message.text }}</h2>
+            <small>{{ humanize(message.time) }}</small>
+        </ion-item>
+    </ion-list>
+
+</ion-content>

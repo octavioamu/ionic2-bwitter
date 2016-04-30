@@ -1,0 +1,5 @@
+.home-page {
+  button {
+    color: map-get($colors, 'favorite') !important;
+  }
+}
