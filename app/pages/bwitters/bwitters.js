@@ -1,7 +1,7 @@
 import {Page, NavParams} from 'ionic-angular';
 import {FormBuilder, Validators} from 'angular2/common';
 import {SocketIO} from '../../providers/SocketIO';
-import * as moment from 'moment';
+import * as moment from 'moment-timezone';
 import * as _ from 'lodash';
 
 @Page({
